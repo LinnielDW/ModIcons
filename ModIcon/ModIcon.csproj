@@ -38,6 +38,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="ModIcon.cs" />
+        <Compile Include="ModIconSettings.cs" />
         <Compile Include="Patches\ModSummaryWindow_DrawContents_Patch.cs" />
     </ItemGroup>
     <ItemGroup>

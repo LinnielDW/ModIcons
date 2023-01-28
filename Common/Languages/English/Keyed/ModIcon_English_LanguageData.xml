@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+    <ModIcon_Settings_Category>Mod Icons</ModIcon_Settings_Category>
+    <ModIcon_Settings_ShowModIcons>Show Mod Icons</ModIcon_Settings_ShowModIcons>
+    <ModIcon_Settings_ShowModIconsTooltip>Shows mod icons in the loading screen.\n\nRequires restart in order to take effect.</ModIcon_Settings_ShowModIconsTooltip>
+</LanguageData>
