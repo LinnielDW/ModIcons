@@ -5,10 +5,10 @@ using System.Reflection.Emit;
 using HarmonyLib;
 using UnityEngine;
 using Verse;
-using static ModIcon.ModIconSettings;
+using static ModIcons.ModIconSettings;
 using System.IO;
 
-namespace ModIcon.Patches;
+namespace ModIcons.Patches;
 
 [StaticConstructorOnStartup]
 [HarmonyPatch]

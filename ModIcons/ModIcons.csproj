@@ -5,8 +5,8 @@
         <ProjectGuid>{12BB74B9-9D19-49CA-899E-BD79C3022165}</ProjectGuid>
         <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>ModIcon</RootNamespace>
-        <AssemblyName>ModIcon</AssemblyName>
+        <RootNamespace>ModIcons</RootNamespace>
+        <AssemblyName>ModIcons</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>latest</LangVersion>
@@ -37,8 +37,8 @@
         <PackageReference Include="Lib.Harmony" Version="2.2.2" />
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="ModIcon.cs" />
-        <Compile Include="ModIconSettings.cs" />
+        <Compile Include="ModIcons.cs" />
+        <Compile Include="ModIconsSettings.cs" />
         <Compile Include="Patches\ModSummaryWindow_DrawContents_Patch.cs" />
     </ItemGroup>
     <ItemGroup>

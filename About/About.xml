@@ -1,7 +1,7 @@
 <ModMetaData>
-    <name>Mod Icon</name>
+    <name>Mod Icons</name>
     <author>Arquebus</author>
-    <packageId>Arquebus.ModIcon</packageId>
+    <packageId>Arquebus.ModIcons</packageId>
     <supportedVersions>
         <li>1.4</li>
     </supportedVersions>

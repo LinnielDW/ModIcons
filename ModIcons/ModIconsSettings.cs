@@ -2,7 +2,7 @@
 using UnityEngine;
 using Verse;
 
-namespace ModIcon;
+namespace ModIcons;
 
 public class ModIconSettings : ModSettings
 {

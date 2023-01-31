@@ -3,7 +3,7 @@ using HarmonyLib;
 using UnityEngine;
 using Verse;
 
-namespace ModIcon;
+namespace ModIcons;
 
 [StaticConstructorOnStartup]
 public class ModIconPatches
@@ -15,10 +15,10 @@ public class ModIconPatches
     }
 }
 
-public class ModIcon: Mod
+public class ModIcons: Mod
 {
     ModIconSettings settings;
-    public ModIcon(ModContentPack content) : base(content)
+    public ModIcons(ModContentPack content) : base(content)
     {
         settings = GetSettings<ModIconSettings>();
     }
