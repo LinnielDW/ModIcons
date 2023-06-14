@@ -40,6 +40,7 @@
         <Compile Include="ModIcons.cs" />
         <Compile Include="ModIconsSettings.cs" />
         <Compile Include="Patches\ModSummaryWindow_DrawContents_Patch.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <PropertyGroup>
         <ModsLocation>D:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods</ModsLocation>

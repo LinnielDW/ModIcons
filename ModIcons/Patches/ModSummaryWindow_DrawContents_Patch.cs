@@ -17,6 +17,8 @@ public static class ModSummaryWindow_DrawContents_Patch
     static MethodInfo drawContainerBox = AccessTools.Method(typeof(Widgets), "DrawBoxSolid");
     static ConstructorInfo constructLabelRect = AccessTools.DeclaredConstructor(typeof(Rect), new[] { typeof(Single), typeof(Single), typeof(Single), typeof(Single) });
     static FieldInfo modInfo = AccessTools.Inner(typeof(ModSummaryWindow), "<>c__DisplayClass17_3").GetField("mod");
+    
+    public static Dictionary<ModMetaData, Texture2D> texDict = new Dictionary<ModMetaData, Texture2D>();
 
     static IEnumerable<MethodBase> TargetMethods()
     {
@@ -76,16 +78,22 @@ public static class ModSummaryWindow_DrawContents_Patch
             return;
         }
 
-        Texture2D tex = new Texture2D(0,0);
-        tex.LoadImage(File.ReadAllBytes(AboutPath(mod.RootDir)));
+        if (!texDict.TryGetValue(mod, out Texture2D outTex))
+        {
+            // Log.Message("tex for mod `" + mod.PackageId + "` not found in icon dictionary. Fetching.");
+            Texture2D tex = new Texture2D(0,0);
+            tex.LoadImage(File.ReadAllBytes(AboutPath(mod.RootDir)));
+            
+            texDict.Add(mod, tex);
+        }
         
         Rect iconRect = new Rect(r.x + 8f, r.y + 2f, 32f, 32f);
-        GenUI.DrawTextureWithMaterial(iconRect, tex, null);
+        GenUI.DrawTextureWithMaterial(iconRect, outTex, null);
     }
 
     private static void ResizeLabelRect(ref Rect r, ModMetaData mod)
     {
-        if (!File.Exists(AboutPath(mod.RootDir)))
+        if (!texDict.TryGetValue(mod))
         {
             return;
         }
